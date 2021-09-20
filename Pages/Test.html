@@ -50,12 +50,23 @@ body {
   padding: 10px;
 }
   
-.floatright {
-  float: right;
-}
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
   
- .floatleft {
-  float: left;
+    .topnav a, .topnav-left {
+    float: none;
+    display: block;
+  }
+  
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 }
 
 </style>
@@ -68,16 +79,18 @@ body {
   </div>
   <a href="https://cornholio11111.github.io/RoStats/Pages/Home">Home</a>
   <a href="https://cornholio11111.github.io/RoStats/Pages/FindCreators">Find Creators</a>
-  <div class="floatright">
+    <div class="topnav-right">
     <a class="active" href="">Login</a>
     <a href="https://cornholio11111.github.io/RoStats/Pages/SignUp">Sign Up</a>
   </div>
 </div>
  
 <div class="alert">
+    <div class="topnav-centered">
 <div class="banner">
-     <h1 style="font-size: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">Please consider using your RoStats profile as evidence when replying to marketplace hiring posts on the Roblox Devforum!</h1>
+     <h1 style="font-size: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color:white;">Please consider using your RoStats profile as evidence when replying to marketplace hiring posts on the Roblox Devforum!</h1>
 </div>
+  </div>
   </div>
   
 <div align="center">
