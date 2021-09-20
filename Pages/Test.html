@@ -27,10 +27,15 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ffffff00;
+  background-color: #ddd;
   color: black;
 }
 
+.topnav a.active {
+  background-color: #2584ff;
+  color: white;
+}
+  
 .Text {
   text-align: center;
   vertical-align: middle;
@@ -84,8 +89,6 @@ body {
   margin: 4px 2px;
 }
 
-.Main {border-radius: 8px;}
-
 .TopbarButton {
   background-color: #090A0B;
   border: none;
@@ -97,20 +100,8 @@ body {
   font-size: 15px;
   margin: -10.5px 2px;
 }
-
+  
 .Main {border-radius: 8px;}
-
-.TopbarButtonActive {
-  background-color: #2584ff;
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  margin: -10.5px 2px;
-}
 
 .Main {border-radius: 8px;}
 
@@ -120,16 +111,11 @@ body {
 <body style="background-color:#181A1D;">
   
 <div class="topnav">
-
-<a href="/RoStats/Pages/Home" target="_blank"><button class="TopbarButton Main" style=" margin-right: 0px; margin-left: 1px; font-weight: 1000; transform: translate(0px, -2px); padding-bottom: 20.5px;">Home</button></a>
-
-<a href="/RoStats/Pages/FindCreators" target="_blank"><button class="TopbarButton Main" style=" margin-right: 0px; margin-left: 1px; font-weight: 1000; transform: translate(0px, -2px); padding-bottom: 20.5px;">Find Creators</button></a>
-
+  <a href="https://cornholio11111.github.io/RoStats/Pages/Home">Home</a>
+  <a href="https://cornholio11111.github.io/RoStats/Pages/FindCreators">Find Creators</a>
     <div class="topnav-right">
-        <a href="/RoStats/Pages/SignUp" target="_blank"><button class="TopbarButtonActive Main;" style=" margin-right: 0px; margin-left: 1px; font-weight: 1000; transform: translate(0px, -2px); padding-bottom: 20.5px;">Sign Up</button></a>
-    
-    <a href="/RoStats/Pages/SignUp" target="_blank"><button class="TopbarButton Main" style=" margin-right: 0px; margin-left: 1px; font-weight: 1000; transform: translate(0px, -2px); padding-bottom: 20.5px;">Sign Up</button></a>
-    
+    <a class="active" href="">Login</a>
+    <a href="/RoStats/Pages/SignUp" target="_blank"><button class="TopbarButton Main" style=" margin-right: 0px; margin-left: 1px; font-weight: 1000; transform: translate(0px, -2px); padding-bottom: 20.5px;">Join Our Discord</button></a>
   </div>
 </div>
  
