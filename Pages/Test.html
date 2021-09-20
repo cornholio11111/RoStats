@@ -50,13 +50,21 @@ body {
   padding: 10px;
 }
   
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu (for mobile devices) */
 @media screen and (max-width: 600px) {
   .topnav a, .topnav-right {
-    float: none;
-    display: block;
-  }
-  
-    .topnav a, .topnav-left {
     float: none;
     display: block;
   }
@@ -68,6 +76,7 @@ body {
     transform: none;
   }
 }
+<
 
 </style>
 </head>
@@ -94,12 +103,12 @@ body {
   </div>
   
 <div align="center">
-        <img src="/web/20210409000431im_/https://www.rostats.info/static/images/index/studiodevslogocircle.svg" width="350px" height="350px" style="margin-top: 35px; display: block">
+        <img src="https://i.imgur.com/silo8yx.png" width="350px" height="350px" style="margin-top: 35px; display: block">
         <h2 style="margin-top: 15px; font-size: 35px; font-weight: 550;">RoStats</h2>
         <h3 style="margin-top: 2.5px; font-size: 30px; font-weight: 450; color: #7F7F7F;">Stats For You</h3>
         
         <div style="margin-top: 60px; display: flex; flex-flow: row; justify-content: center">
-            <a class="cta" href="https://web.archive.org/web/20210409000431/https://discord.gg/suUHwVvU8s" target="_blank"><button style="width: 350px; height: 96px; font-size: 25px; font-weight: 1000; margin-right: 35px;">Join Our Discord</button></a>
+            <a class="cta" href="https://discord.gg/BRqHeeGGKr" target="_blank"><button style="width: 350px; height: 96px; font-size: 25px; font-weight: 1000; margin-right: 35px;">Join Our Discord</button></a>
             <button style="width: 350px; height: 96px; font-size: 25px; font-weight: 1000; cursor: pointer;" onclick="document.getElementById('footerwaves').scrollIntoView();">About RoStats</button>
         </div>
     <div>
