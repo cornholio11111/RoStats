@@ -1,4 +1,4 @@
-@import url('https://web.archive.org/web/20210502214249cs_/https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* clears the 'X' from Internet Explorer */
 input[type="text"]::-ms-clear {  display: none; width : 0; height: 0; }
