@@ -1,42 +1,13 @@
 <html>
 <head>
   <link rel="icon" href="/RoStats/Images/Icon.png">
-  <title>Find Creators - RoStats</title>
+  <title>Home - RoStats</title>
+  <link rel="stylesheet" type="text/css" href="/RoStats/static/Styles.css">
 <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-    overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #181A1D;
-}
   
 .alert {
   overflow: hidden;
   background-color: #E6AF3B;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #2584ff;
-  color: white;
 }
   
 .Text {
@@ -56,43 +27,6 @@ body {
   float: right;
 }
 
-/* Responsive navigation menu (for mobile devices) */
-@media screen and (max-width: 600px) {
-  .topnav a, .topnav-right {
-    float: none;
-    display: block;
-  }
-  
-  .topnav-centered a {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-  }
-}
-
-.button {
-  background-color: #090A0B;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  margin: 4px 2px;
-}
- 
- @font-face {
- font-family: 'Montserrat';
- src: url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
-}
-  
-div {
- font-family: 'Montserrat', sans-serif;
-}
-  
-.Main {border-radius: 8px;}
 h1 {text-align: center;}
 .side { background-color: transparent; }
   
@@ -101,25 +35,57 @@ h1 {text-align: center;}
 </head>
 <body style="background-color:#181a1d;">
  
-<div class="topnav">
-  <a  href="/RoStats/Pages/Home">Home</a>
-  <a class="active" href="/RoStats/Pages/FindCreators">Find Creators</a>
-    <div class="topnav-right">
-    <a href="/RoStats/Pages/Login">Login</a>
-    <a href="/RoStats/Pages/SignUp">Sign Up</a>
-  </div>
+<div class="header">
+<div class="computer" style="position: sticky; width: 100%; top: 0%; z-index: 99999999999999;">
+
+            <header style="z-index: 9999;">
+
+                
+                    <a href="/RoStats/Pages/Home"><h1>RoStats</h1></a>
+                
+                
+                <form name="searchForm" action="/RoStats/searching" method="POST" id="search_background" class="search_background" style="background-color: rgb(24, 26, 29);">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="brnNr4xP8K2OFC1Eim01gYTIUJBMgPwP3HYr8mezDRAp9b2n1D50aybEH4bRzcFA">
+                    <div id="search_bar" class="searchbar">
+                        <input name="user" class="search" placeholder="Search For A User Here" required=""> 
+                        <input type="image" class="search_im" style="width: 25px; height: auto; outline: none; cursor: pointer;" src="/Rostats/Images/search.svg"> 
+                    </div>
+                </form>
+                
+                <nav>
+                    <ul class="nav_links">
+                        <li style="cursor: pointer;" onclick="search()" onmouseover="search_over()" onmouseout="search_out()"><a id="search_nav">Search</a></li>
+                        <li><a href="/RoStats/Pages/api">API</a></li>
+                        
+                        
+                            <a id="special" href="/RoStats/Pages/signup"><button style="font-size: 80%; margin-right: 10px; margin-left: 25px; font-weight: 1000; transform: translate(0px, -2px); padding-bottom: 11.5px;"> &ZeroWidthSpace; Sign Up &ZeroWidthSpace; </button></a>
+                        
+                        
+                    </ul>    
+                </nav>
+
+            </header>
+                <div class="banner">
+                    <h1 style="font-size: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">Please consider using your RoStats profile as evidence when replying to marketplace hiring posts on the Roblox Devforum!</h1>
+                </div>
+        </div>
 </div>
- 
-<div class="alert">
-  <div class="topnav-centered">
-    <div class="banner">
-      <h1 style="font-size: 20px; font-weight: 1000; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color:white;">Please consider using your RoStats profile as evidence when replying to marketplace hiring posts on the Roblox Devforum!</h1>
-</div>
-  </div>
-  </div>
   
- <div class="Text"   style="padding-top:150px">
-  <h1 style="color:#303030;">No Active Creators!</h1>
-</div>
+<div align="center">
+        <h2 style="margin-top: 15px; font-size: 35px; font-weight: 550; color: #edf0f1;">No Creators Found!</h2>
+        <h3 style="margin-top: 2.5px; font-size: 35px; font-weight: 450; color: #7F7F7F;">Try Again Later!</h3>
+        
+        <div style="margin-top: 60px; display: flex; flex-flow: row; justify-content: center">
+            <a href="https://discord.gg/BRqHeeGGKr" target="_blank"><button class="button Main" style="width: 350px; height: 96px; font-size: 25px; font-weight: 1000; margin-right: 35px;">Join Our Discord</button></a>
+            <button class="button Main" style="width: 350px; height: 96px; font-size: 25px; font-weight: 1000; cursor: pointer;" onclick="document.getElementById('footerwaves').scrollIntoView();">About RoStats</button>
+        </div>
+    <div>
+    
+    
+    <img id="footerwaves" src="/RoStats/Images/footerwaves.svg" style="width: 100%; height: auto; margin-top: 120px;">
+    <div style="background-color: #090A0B; width: 100%; height: 900px; margin-top: -5.01px; vertical-align: text-bottom; display: flex; align-items: center; flex-direction: column;">
+
+    </div>
+</div></div>
 
 </html>
