@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="519px" height="122px" viewBox="0 0 519 122" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 9</title>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9" transform="translate(3.000000, 3.000000)">
+            <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2.5" fill="#1E2024" x="-1.25" y="-1.25" width="515.5" height="118.5" rx="10"></rect>
+            <path d="M10,0 L503,0 C508.522847,-1.01453063e-15 513,4.4771525 513,10 L513,36 L513,36 L0,36 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 Z" id="Rectangle" fill-opacity="0.35" fill="#616263"></path>
+            <g id="Group" transform="translate(12.000000, 11.000000)">
+                <circle id="Oval" fill="#EC5D58" cx="7.5" cy="7.5" r="7.5"></circle>
+                <circle id="Oval" fill="#F0B633" cx="32.5" cy="7.5" r="7.5"></circle>
+                <circle id="Oval" fill="#41C541" cx="57.5" cy="7.5" r="7.5"></circle>
+            </g>
+            <g id="Group-8" transform="translate(56.000000, 56.000000)">
+                <rect id="Rectangle" fill="#121315" x="0" y="0" width="401" height="39" rx="19.5"></rect>
+                <g id="Group-7" transform="translate(51.000000, 6.000000)">
+                    <path d="M144.5,0 C151.955844,-1.36961635e-15 158,6.04415588 158,13.5 C158,20.9558441 151.955844,27 144.5,27 L13.5,27 C6.04415588,27 9.13077564e-16,20.9558441 0,13.5 C-9.13077564e-16,6.04415588 6.04415588,1.36961635e-15 13.5,0 L144.5,0 Z M16,3.5 C10.4771525,3.5 6,7.9771525 6,13.5 C6,19.0228475 10.4771525,23.5 16,23.5 C21.5228475,23.5 26,19.0228475 26,13.5 C26,7.9771525 21.5228475,3.5 16,3.5 Z" id="Combined-Shape" fill="#484D52"></path>
+                    <rect id="Rectangle" fill="#D8D8D8" x="42" y="8.5" width="57" height="10" rx="5"></rect>
+                    <rect id="Rectangle" fill="#D8D8D8" x="106" y="8.5" width="30" height="10" rx="5"></rect>
+                </g>
+                <g id="Group-7" transform="translate(215.000000, 6.000000)">
+                    <g id="Combined-Shape-2" fill="#484D52">
+                        <path d="M121.5,0 C128.955844,-1.36961635e-15 135,6.04415588 135,13.5 C135,20.9558441 128.955844,27 121.5,27 L13.5,27 C6.04415588,27 9.13077564e-16,20.9558441 0,13.5 C-9.13077564e-16,6.04415588 6.04415588,1.36961635e-15 13.5,0 L121.5,0 Z M16,3.5 C10.4771525,3.5 6,7.9771525 6,13.5 C6,19.0228475 10.4771525,23.5 16,23.5 C21.5228475,23.5 26,19.0228475 26,13.5 C26,7.9771525 21.5228475,3.5 16,3.5 Z" id="Combined-Shape"></path>
+                    </g>
+                    <rect id="Rectangle" fill="#D8D8D8" x="43" y="8.5" width="15" height="10" rx="5"></rect>
+                    <rect id="Rectangle" fill="#D8D8D8" x="65" y="8.5" width="49" height="10" rx="5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

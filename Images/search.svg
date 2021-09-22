@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1662px" height="1662px" viewbox="0 0 1662 1662" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <rect width="1662" height="1662" id="slice_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#slice_1" clip-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Slice-17" clip-path="url(#clip_1)">
+    <use xlink:href="#slice_1" stroke="none" fill="none" />
+    <path d="M524.5 -1.79315e-05C234.827 -8.02821e-06 8.02821e-06 234.827 1.79315e-05 524.5C2.78348e-05 814.173 234.827 1049 524.5 1049C814.173 1049 1049 814.173 1049 524.5C1049 234.827 814.173 -2.78348e-05 524.5 -1.79315e-05ZM524.5 144C314.355 144 144 314.355 144 524.5C144 734.644 314.355 905 524.5 905C734.644 905 905 734.644 905 524.5C905 314.355 734.644 144 524.5 144Z" transform="matrix(0.8191523 -0.57357603 0.57357603 0.8191523 -5.973633 510.0235)" id="Ellipse-2-Difference" fill="#EDF0F1" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L246 0L246 668L0 668L0 0Z" transform="matrix(0.8191523 -0.57357603 0.57357603 0.8191523 862.81445 1051.6608)" id="Rectangle-47" fill="#EDF0F1" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>
