@@ -1,4 +1,4 @@
-@import url('https://web.archive.org/web/20210502214249cs_/https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* clears the 'X' from Internet Explorer */
 input[type="text"]::-ms-clear {  display: none; width : 0; height: 0; }
@@ -341,24 +341,3 @@ select {
     align-content: center;
     align-items: center;
 }
-/*
-     FILE ARCHIVED ON 21:42:49 May 02, 2021 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 17:44:22 Sep 20, 2021.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  exclusion.robots: 0.157
-  load_resource: 81.753
-  cdx.remote: 0.083
-  CDXLines.iter: 19.216 (3)
-  PetaboxLoader3.resolve: 50.156
-  captures_list: 270.397
-  exclusion.robots.policy: 0.145
-  esindex: 0.011
-  PetaboxLoader3.datanode: 212.397 (4)
-  LoadShardBlock: 231.061 (3)
-*/
