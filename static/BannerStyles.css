@@ -1,4 +1,4 @@
-@import 'record.css'; /* for SPN1 */
+@import '/RoStats/static/record.css'; /* for SPN1 */
 
 #wm-ipp-base {
   min-height:65px;
