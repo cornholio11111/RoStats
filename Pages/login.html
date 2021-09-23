@@ -87,8 +87,9 @@ h1 {text-align: center;}
                 
                 <!-- password -->
                 <h1 style="display: flex; justify-self: left !important; margin-left: 61px; font-size: 25px; padding-top: 35px;">Password</h1>
-                <input id="password" type="text" class="answer_box" name="password" placeholder="Password: " style="margin-top: 10px;" oninput="pass_requirements()" onfocus="requirements(true)" onblur="requirements(false)" required="">
-                <!-- padlock description -->
+                <input id="password" type="text" class="password" name="password" placeholder="Password: " style="margin-top: 10px;" oninput="pass_requirements()" onfocus="requirements(true)" onblur="requirements(false)" required="">
+             
+              <!-- padlock description -->
                 <div class="container" id="padlock_description" style="opacity: 0.9; width: 190px; height: 30px; background-color: black; transition: all 0.3s ease 0s; position: absolute; z-index: 100; align-self: center; margin-top: -50px; align-items: center; justify-content: center; transform: translate(440px, -40px); display: none;">
                     <h1 id="padlock_text" style="font-size: 18px; margin: 0 auto;">Hide Password</h1>
                     <div style="position: absolute; display: flex; justify-self: center; align-self: center; transform: translate(0px, 20px); width: 0; height: 0;border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid black;"></div>
