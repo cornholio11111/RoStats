@@ -1,0 +1,127 @@
+<html>
+<head>
+  <link rel="icon" href="/RoStats/Images/Icon.png">
+  <title>Signup - RoStats</title>
+  <link rel="stylesheet" type="text/css" href="/RoStats/static/Styles.css">
+<style>
+  
+.alert {
+  overflow: hidden;
+  background-color: #E6AF3B;
+}
+  
+.Text {
+  text-align: center;
+  vertical-align: middle;
+ }
+  
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+h1 {text-align: center;}
+.side { background-color: transparent; }
+  
+  
+</style>
+</head>
+<body>
+  
+<div class="computer" style="position: sticky; width: 100%; top: 0%; z-index: 99999999999999;">
+
+            <header style="z-index: 9999;">
+
+                    <a href="/RoStats/Pages/Home"><h1>RoStats</h1></a>
+                
+                
+                <form name="searchForm" action="/RoStats/searching" method="POST" id="search_background" class="search_background" style="background-color: rgb(24, 26, 29);">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="brnNr4xP8K2OFC1Eim01gYTIUJBMgPwP3HYr8mezDRAp9b2n1D50aybEH4bRzcFA">
+                    <div id="search_bar" class="searchbar">
+                        <input name="user" class="search" placeholder="Search For A User Here" required=""> 
+                        <input type="Image" class="search_im" style="width: 25px; height: auto; outline: none; cursor: pointer;" src="/Rostats/Images/search.svg"> 
+                    </div>
+                </form>
+                
+                <nav>
+                    <ul class="nav_links">
+                        <li style="cursor: pointer;" onclick="search()" onmouseover="search_over()" onmouseout="search_out()"><a id="search_nav">Search</a></li>
+                        <li><a href="/RoStats/Pages/FindCreators">Find Creators</a></li>
+                        
+                        
+                            <a id="special" href="/RoStats/Pages/login"><button style="font-size: 80%; margin-right: 10px; margin-left: 25px; font-weight: 1000; transform: translate(0px, -2px); padding-bottom: 11.5px;"> &ZeroWidthSpace; Login &ZeroWidthSpace; </button></a>
+                      <a id="special" href="/RoStats/Pages/signup"><button style="font-size: 80%; margin-right: 10px; margin-left: 25px; font-weight: 1000; transform: translate(0px, -2px); padding-bottom: 11.5px;"> &ZeroWidthSpace; Sign Up &ZeroWidthSpace; </button></a>
+                        
+                        
+                    </ul>    
+                </nav>
+
+            </header>
+                <div class="banner">
+                    <h1 style="font-size: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">Please consider using your RoStats profile as evidence when replying to marketplace hiring posts on the Roblox Devforum!</h1>
+                </div>
+        </div>
+</div>
+  
+  <form name="signupForm" method="POST" onsubmit="return pass_requirements()">
+
+        <input type="hidden" name="csrfmiddlewaretoken" value="CGaIx39aCuy2PjKnWOgbygaq0MRA7RlTSQtmX7vThh3DDpW4eA9oKtHLgcj2FdyT">
+
+        <div align="center">
+          
+            <h1 style="margin-top: 20px;">Login</h1>   
+            
+            <!-- container for the roblox account linking box -->
+            <div class="container" style="width: 629px; height: 425px; margin-right: 16px; margin-left: 16px; margin-top: 15px;">
+                
+                <!-- email -->
+                <h1 style="display: flex; justify-self: left !important; margin-left: 61px; font-size: 25px; padding-top: 31px; ">Email</h1>
+                <input type="email" class="answer_box" name="email" placeholder="Put In Your Email..." style="margin-top: 10px;" required="">
+                
+                <!-- password -->
+                <h1 style="display: flex; justify-self: left !important; margin-left: 61px; font-size: 25px; padding-top: 35px;">Password</h1>
+                <input id="password" type="text" class="answer_box" name="password" placeholder="Choose A Secure Password..." style="margin-top: 10px;" oninput="pass_requirements()" onfocus="requirements(true)" onblur="requirements(false)" required="">
+                <!-- padlock description -->
+                <div class="container" id="padlock_description" style="opacity: 0.9; width: 190px; height: 30px; background-color: black; transition: all 0.3s ease 0s; position: absolute; z-index: 100; align-self: center; margin-top: -50px; align-items: center; justify-content: center; transform: translate(440px, -40px); display: none;">
+                    <h1 id="padlock_text" style="font-size: 18px; margin: 0 auto;">Hide Password</h1>
+                    <div style="position: absolute; display: flex; justify-self: center; align-self: center; transform: translate(0px, 20px); width: 0; height: 0;border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid black;"></div>
+                </div>
+                <img id="padlock" src="/RoStats/Images/showpassword.svg" onclick="padlock_change()" onmouseover="document.getElementById('padlock_description').style.display = 'flex'" onmouseout="document.getElementById('padlock_description').style.display = 'none'" style="position: absolute; z-index: 99; width: 35px; height: auto; transform: translate(-55px, 19px); cursor: pointer; display: none;">
+                <img id="padlock2" src="/RoStats/Images/hidepassword.svg" onclick="padlock_change()" onmouseover="document.getElementById('padlock_description').style.display = 'flex'" onmouseout="document.getElementById('padlock_description').style.display = 'none'" style="position: absolute; z-index: 99; width: 35px; height: auto; transform: translate(-55px, 19px); cursor: pointer; display: inline;">
+                <h1 id="pass_no_requirements" style="font-size: 15px; margin-top: 10px; color: #c44c4c; margin-right: 20px;">Password or email is incorrect!</h1>
+
+                <!-- password requirements -->
+                <div class="container" id="pass_requirements" style=" display: none; margin-left: 115px; width: 400px; height: 201px; position: absolute; z-index: 100; opacity: 100%; background-color:#EDF0F1; margin-top: -5px; box-shadow: -3px 3px 12px -3px #000000;">
+                    <div style="width: 0; height: 0; border-left: 15px solid transparent;border-right: 15px solid transparent; border-bottom: 15px solid #EDF0F1; margin-top: -15px;"></div>
+                    
+                    <div class="container" style="display: flex; flex-direction: row; align-items: center; text-indent: -20px; margin-top: 13.5px; box-shadow: none; background: none; margin-left: 10px;">
+                        <div id="8chars" style="background-color: #c44c4c; border-radius: 50%; width: 20px; height: 20px; margin-right: 15px; display: flex; justify-content: center; align-items: center;">
+                            <img id="8chars_im" src="/RoStats/Images/cross.svg" style="z-index: 50; height: 50%; width: auto;">
+                        </div>
+                        <h1 style="display: flex; justify-self: center; color: #636363; font-size: 20px; font-weight: 10px;">At Least 8 Characters</h1>
+                    </div>
+                </div>
+    
+            <!-- capcha -->
+            <div class="container" style="width: 629px; height: 116px; margin-right: 16px; margin-left: 16px; margin-top: 15px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center;">
+                <div class="h-captcha" data-sitekey="089652e0-52bd-45e4-98e1-652dbede31d6"><iframe allow="autoplay 'self'; fullscreen 'self'" src="https://assets.hcaptcha.com/captcha/v1/523a6ff/static/hcaptcha-checkbox.html#id=0426sssssssr&amp;host=www.rostats.info&amp;sentry=true&amp;reportapi=https%3A%2F%2Fweb.archive.org%2Fweb%2F20210408232308%2Fhttps%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;tplinks=on&amp;sitekey=089652e0-52bd-45e4-98e1-652dbede31d6" title="widget containing checkbox for hCaptcha security challenge" tabindex="0" frameborder="0" scrolling="no" data-hcaptcha-widget-id="0426sssssssr" data-hcaptcha-response="" style="width: 303px; height: 78px; overflow: hidden;"></iframe><textarea id="g-recaptcha-response-0426sssssssr" name="g-recaptcha-response" style="display: none;"></textarea><textarea id="h-captcha-response-0426sssssssr" name="h-captcha-response" style="display: none;"></textarea></div>
+            </div>
+
+            <!-- continue button -->
+            <div class="container" style="width: 629px; height: 130px; margin-right: 16px; margin-left: 16px; margin-top: 15px; margin-bottom: 15px;">
+                <input id="submitbutton" type="submit" class="input_submit" style="padding-right: 70px; padding-left: 70px; font-weight: 750; font-size: 25px; margin-top: 20px;" value="Create Account">
+                <h1 style="font-size: 15px; padding-top: 15px; color: #636363;">By clicking 'Create Account' you are agreeing to our <a style="font-weight: 550; color: #2D94D5;" href="/web/20210409000421/https://www.rostats.info/terms" target="_blank">Terms And Privacy Conditions</a>. </h1>
+            </div>
+
+        </div>
+
+    </form>
+
+</html>
