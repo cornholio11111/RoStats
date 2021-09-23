@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+        <script>
+            $(function () {
+              $('.js-fillcolor').fillColor();
+            });
+        </script>
+
+        <div class="computer" style="position: sticky; width: 100%; top: 0%; z-index: 99999999999999;">
+
+            <header style="z-index: 9999;">
+
+                
+                    <a href="/web/20210409000421/https://www.rostats.info/"><h1>RoStats</h1></a>
+                
+                
+                <form name="searchForm" action="/web/20210409000421/https://www.rostats.info/searching" method="POST" id="search_background" class="search_background">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="CGaIx39aCuy2PjKnWOgbygaq0MRA7RlTSQtmX7vThh3DDpW4eA9oKtHLgcj2FdyT"/>
+                    <div id="search_bar" class="searchbar">
+                        <input name="user" class="search" placeholder="Search For A User Here" required> 
+                        <input type="image" class="search_im" style="width: 25px; height: auto; outline: none; cursor: pointer;" src="/RoStats/Images/search.svg"> 
+                    </div>
+                </form>
+                
+                <nav>
+                    <ul class="nav_links">
+                        <li style="cursor: pointer;" onclick="search()" onmouseover="search_over()" onmouseout="search_out()"><a id="search_nav">Search</a></li>
+                        
+                        
+                            <a id="special" href="/web/20210409000421/https://www.rostats.info/signin"><button style="font-size: 80%; margin-right: 10px; margin-left: 25px; font-weight: 1000; transform: translate(0px, -2px); padding-bottom: 11.5px;"> ​ Sign In ​ </button></a>
+                        
+                        
+                    </ul>    
+                </nav>
+
+            </header>
+
+            
+                <div class="banner">
+                    <h1 style="font-size: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">Please consider using your RoStats profile as evidence when replying to marketplace hiring posts on the Roblox Devforum!</h1>
+                </div>
+            
+
+        </div>
+
+        <div class="mobile" style="display: none; justify-self: right; position: sticky; width: 100%; z-index: 99999999999999;">
+
+            <header style="z-index: 9999; height: 120px;">
+
+                    
+                        <a href="/web/20210409000421/https://www.rostats.info/"><h1 style="font-size: 75px;">RoStats</h1></a>
+                    
+                    
+                    <form name="searchForm" action="/web/20210409000421/https://www.rostats.info/searching" method="POST" id="search_background" class="search_background">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="CGaIx39aCuy2PjKnWOgbygaq0MRA7RlTSQtmX7vThh3DDpW4eA9oKtHLgcj2FdyT"/>
+                        <div id="search_bar" class="searchbar">
+                            <input name="user" class="search" placeholder="Search For A User Here" required> 
+                            <input type="image" class="search_im" style="width: 25px; height: auto; outline: none; cursor: pointer;" src="/RoStats/Images/search.svg"> 
+                        </div>
+                    </form>
+                    
+                   <img src="/RoStats/Images/hamburger.svg" style="height: 65%; width: auto; margin-right: 15px;">
+
+            </header>
+
+            
+                <div class="banner">
+                    <h1 style="font-size: 25px;">Please consider using your RoStats profile as evidence when replying to marketplace hiring posts on the Roblox Devforum!</h1>
+                </div>
+            
+
+        </div>
+
+        
+        
+
+    <script>
+
+        function padlock_change() {
+
+            if (document.getElementById("padlock").style.display == "inline") {
+
+                document.getElementById("padlock").style.display = "none"
+                document.getElementById("padlock2").style.display = "inline"
+
+                document.getElementById("password").type = "text"
+
+                document.getElementById("padlock_text").innerHTML = "Hide Password"
+
+            } else {
+
+                document.getElementById("padlock2").style.display = "none"
+                document.getElementById("padlock").style.display = "inline"
+
+                document.getElementById("password").type = "password"
+
+                document.getElementById("padlock_text").innerHTML = "Show Password"
+            }
+
+        }
+
+        function padlock_change2() {
+
+            if (document.getElementById("padlock3").style.display == "inline") {
+
+                document.getElementById("padlock3").style.display = "none"
+                document.getElementById("padlock4").style.display = "inline"
+
+                document.getElementById("confirmpassword").type = "text"
+
+                document.getElementById("padlock2_text").innerHTML = "Hide Password"
+
+            } else {
+
+                document.getElementById("padlock4").style.display = "none"
+                document.getElementById("padlock3").style.display = "inline"
+
+                document.getElementById("confirmpassword").type = "password"
+
+                document.getElementById("padlock2_text").innerHTML = "Show Password"
+            }
+
+        }
+
+        function pass_requirements() {
+
+            var passed
+
+            // At least 8 characters
+            if ((document.getElementById("password").value).length >= 8) {
+                document.getElementById("8chars").style.backgroundColor = "#1a8635"
+                document.getElementById("8chars_im").src = "/RoStats/Images/tick.svg"
+                if (passed != false) {
+                    var passed = true
+                }
+            } else {
+                document.getElementById("8chars").style.backgroundColor = "#c44c4c"
+                document.getElementById("8chars_im").src = "/RoStats/Images/cross.png"
+                var passed = false
+            }
+
+            // Upppercase Letter
+            if ((document.getElementById("password").value).match(/[A-Z]/))  {
+                document.getElementById("uppercase").style.backgroundColor = "#1a8635"
+                document.getElementById("uppercase_im").src = "/RoStats/Images/tick.svg"
+                if (passed != false) {
+                    var passed = true
+                }
+            } else {
+                document.getElementById("uppercase").style.backgroundColor = "#c44c4c"
+                document.getElementById("uppercase_im").src = "/RoStats/Images/cross.png"
+                var passed = false
+            }
+
+            // Lowercase Letter
+            if ((document.getElementById("password").value).match(/[a-z]/))  {
+                document.getElementById("lowercase").style.backgroundColor = "#1a8635"
+                document.getElementById("lowercase_im").src = "/RoStats/Images/tick.svg"
+                if (passed != false) {
+                    var passed = true
+                }
+            } else {
+                document.getElementById("lowercase").style.backgroundColor = "#c44c4c"
+                document.getElementById("lowercase_im").src = "/RoStats/Images/cross.png"
+                var passed = false
+            }
+
+            // Number
+            if ((document.getElementById("password").value).match(/[0-9]/))  {
+                document.getElementById("number").style.backgroundColor = "#1a8635"
+                document.getElementById("number_im").src = "/RoStats/Images/tick.svg"
+                if (passed != false) {
+                    var passed = true
+                }
+            } else {
+                document.getElementById("number").style.backgroundColor = "#c44c4c"
+                document.getElementById("number_im").src = "/RoStats/Images/cross.png"
+                var passed = false
+            }
+
+            // Symbol
+            if ((document.getElementById("password").value).match(/[@#$%\^&*()\-_=+\|\[{\]};:'",<.>/?!]/))  {
+                document.getElementById("symbol").style.backgroundColor = "#1a8635"
+                document.getElementById("symbol_im").src = "/RoStats/Images/tick.svg"
+                if (passed != false) {
+                    var passed = true
+                }
+            } else {
+                document.getElementById("symbol").style.backgroundColor = "#c44c4c"
+                document.getElementById("symbol_im").src = "/RoStats/Images/cross.png"
+                var passed = false
+            }
+            
+            if (passed == false) {
+                document.getElementById("pass_no_requirements").style.opacity = "100%";
+                
+            } else {
+                document.getElementById("pass_no_requirements").style.opacity = "0%";
+            }
+
+            // passwords match
+            if (document.getElementById("confirmpassword").value != document.getElementById("password").value) {
+                document.getElementById("pass_no_match").style.display = "block"
+                var passed = false
+            } else {
+                document.getElementById("pass_no_match").style.display = "none"
+                if (passed != false) {
+                    var passed = true
+                }
+            }
+
+            return passed
+
+        }
+
+        function can_submit() {
+
+            var passed
+
+            // if password has passed requirements
+            if (pass_requirements()) {
+                var passed = true
+                document.getElementById("submitbutton").type = "button"
+                document.getElementById("submitbutton").value = "Loading..."
+            } else {
+                var passed = false
+            }
+            
+             return passed
+        }
+
+        function requirements(state) {
+            document.getElementById("pass_requirements").style.display = "block"
+            if (state == true) {
+                document.getElementById("pass_requirements").style.display = "block"
+            } else if (state == false) {
+                document.getElementById("pass_requirements").style.display = "none"
+            }
+        }
+
+    </script>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+
+    <head>
+        <meta property="og:site_name" content="RoStats"/>
+        <meta property="og:title" content="Sign Up"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="/RoStats/Images/studiodevslogocircle.png"/>
+        <meta property="og:description" content="Sign up for RoStats today! RoStats is a website where you can see stats about other Roblox developers."/>
+        <meta name="theme-color" content="#3CA5F4"/>
+    </head>
+    
+    <!-- container for the sign up boxes -->
+    <form name="signupForm" method="POST" onsubmit="return pass_requirements()">
+
+        <input type="hidden" name="csrfmiddlewaretoken" value="CGaIx39aCuy2PjKnWOgbygaq0MRA7RlTSQtmX7vThh3DDpW4eA9oKtHLgcj2FdyT"/>
+
+        <div align="center">
+
+            <h1 style="margin-top: 20px;">Sign Up</h1>   
+            
+            <!-- container for the roblox account linking box -->
+            <div class="container" style="width: 629px; height: 425px; margin-right: 16px; margin-left: 16px; margin-top: 15px;">
+                
+                <!-- email -->
+                <h1 style="display: flex; justify-self: left !important; margin-left: 61px; font-size: 25px; padding-top: 31px; ">Email</h1>
+                <input type="email" class="answer_box" name="email" placeholder="Put In Your Email..." style="margin-top: 10px;" required>
+                
+                <!-- password -->
+                <h1 style="display: flex; justify-self: left !important; margin-left: 61px; font-size: 25px; padding-top: 35px;">Password</h1>
+                <input id="password" type="password" class="answer_box" name="password" placeholder="Choose A Secure Password..." style="margin-top: 10px;" oninput="pass_requirements()" onfocus="requirements(true)" onblur="requirements(false)" required>
+                <!-- padlock description -->
+                <div class="container" id="padlock_description" style="display: none !important; opacity: 90%; width: 190px; height: 30px; z-index: 100; background-color:black; transition: 0.3s ease 0s; position: absolute; z-index: 100; align-self: center; margin-top: -50px; display: flex; align-items: center; justify-content: center; transform: translate(440px, -40px);">
+                    <h1 id="padlock_text" style="font-size: 18px; margin: 0 auto;">Show Password</h1>
+                    <div style="position: absolute; display: flex; justify-self: center; align-self: center; transform: translate(0px, 20px); width: 0; height: 0;border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid black;"></div>
+                </div>
+                <img id="padlock" src="/RoStats/Images/showpassword.svg" onclick="padlock_change()" onmouseover="document.getElementById('padlock_description').style.display = 'flex'" onmouseout="document.getElementById('padlock_description').style.display = 'none'" style="position: absolute; z-index: 99; width: 35px; height: auto; transform: translate(-55px, 19px); cursor: pointer; display: inline;">
+                <img id="padlock2" src=/RoStats/Images/hidepassword.svg" onclick="padlock_change()" onmouseover="document.getElementById('padlock_description').style.display = 'flex'" onmouseout="document.getElementById('padlock_description').style.display = 'none'" style="position: absolute; z-index: 99; width: 35px; height: auto; transform: translate(-55px, 19px); cursor: pointer; display: none;">
+                <h1 id="pass_no_requirements" style="font-size: 15px; margin-top: 10px; color: #c44c4c; margin-right: 20px;">Your Password Doesn't Meet All The Requirements!</h1>
+
+                <!-- password requirements -->
+                <div class="container" id="pass_requirements" style=" display: none; margin-left: 115px; width: 400px; height: 201px; position: absolute; z-index: 100; opacity: 100%; background-color:#EDF0F1; margin-top: -5px; box-shadow: -3px 3px 12px -3px #000000;">
+                    <div style="width: 0; height: 0; border-left: 15px solid transparent;border-right: 15px solid transparent; border-bottom: 15px solid #EDF0F1; margin-top: -15px;"></div>
+                    
+                    <div class="container" style="display: flex; flex-direction: row; align-items: center; text-indent: -20px; margin-top: 13.5px; box-shadow: none; background: none; margin-left: 10px;">
+                        <div id="8chars" style="background-color: #c44c4c; border-radius: 50%; width: 20px; height: 20px; margin-right: 15px; display: flex; justify-content: center; align-items: center;">
+                            <img id="8chars_im" src="/RoStats/Images/cross.png" style="z-index: 50; height: 50%; width: auto;">
+                        </div>
+                        <h1 style="display: flex; justify-self: center; color: #636363; font-size: 20px; font-weight: 10px;">At Least 8 Characters</h1>
+                    </div>
+
+                    <div class="container" style="display: flex; flex-direction: row; align-items: center; text-indent: -20px; margin-top: 13.5px; box-shadow: none; background: none; margin-left: 10px;">
+                        <div id="uppercase" style="background-color: #c44c4c; border-radius: 50%; width: 20px; height: 20px; margin-right: 15px; display: flex; justify-content: center; align-items: center;">
+                            <img id="uppercase_im" src="/RoStats/Images/cross.png" style="z-index: 50; height: 50%; width: auto;">
+                        </div>
+                        <h1 style="display: flex; justify-self: center; color: #636363; font-size: 20px; font-weight: 10px;">Include An Uppercase Letter</h1>
+                    </div>
+
+                    <div class="container" style="display: flex; flex-direction: row; align-items: center; text-indent: -20px; margin-top: 13.5px; box-shadow: none; background: none; margin-left: 10px;">
+                        <div id="lowercase" style="background-color: #c44c4c; border-radius: 50%; width: 20px; height: 20px; margin-right: 15px; display: flex; justify-content: center; align-items: center;">
+                            <img id="lowercase_im" src="/RoStats/Images/cross.png" style="z-index: 50; height: 50%; width: auto;">
+                        </div>
+                        <h1 style="display: flex; justify-self: center; color: #636363; font-size: 20px; font-weight: 10px;">Include A Lowercase Letter</h1>
+                    </div>
+
+                    <div class="container" style="display: flex; flex-direction: row; align-items: center; text-indent: -20px; margin-top: 13.5px; box-shadow: none; background: none; margin-left: 10px;">
+                        <div id="number" style="background-color: #c44c4c; border-radius: 50%; width: 20px; height: 20px; margin-right: 15px; display: flex; justify-content: center; align-items: center;">
+                            <img id="number_im" src="/RoStats/Images/cross.png" style="z-index: 50; height: 50%; width: auto;">
+                        </div>
+                        <h1 style="display: flex; justify-self: center; color: #636363; font-size: 20px; font-weight: 10px;">Include A Number</h1>
+                    </div>
+
+                    <div class="container" style="display: flex; flex-direction: row; align-items: center; text-indent: -20px; margin-top: 13.5px; box-shadow: none; background: none; margin-left: 10px;">
+                        <div id="symbol" style="background-color: #c44c4c; border-radius: 50%; width: 20px; height: 20px; margin-right: 15px; display: flex; justify-content: center; align-items: center;">
+                            <img id="symbol_im" src="/RoStats/Images/cross.png" style="z-index: 50; height: 50%; width: auto;">
+                        </div>
+                        <h1 style="display: flex; justify-self: center; color: #636363; font-size: 20px; font-weight: 10px;">Include A Symbol</h1>
+                    </div>
+
+
+                </div>
+
+                <!-- confirm password -->
+                <h1 style="display: flex; justify-self: left !important; margin-left: 61px; font-size: 25px; padding-top: 10px;">Confirm Password</h1>
+                <input id="confirmpassword" type="password" class="answer_box" name="password" placeholder="Confirm Your Password..." style="margin-top: 10px;" oninput="pass_requirements()" required>
+                <!-- padlock2 description -->
+                <div class="container" id="padlock2_description" style="display: none  !important;; opacity: 90%; width: 190px; height: 30px; z-index: 100; background-color:black; transition: 0.3s ease 0s; position: absolute; z-index: 100; align-self: center; margin-top: -50px; display: flex; align-items: center; justify-content: center; transform: translate(440px, -40px);">
+                    <h1 id="padlock2_text" style="font-size: 18px; margin: 0 auto;">Show Password</h1>
+                    <div style="position: absolute; display: flex; justify-self: center; align-self: center; transform: translate(0px, 20px); width: 0; height: 0;border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid black;"></div>
+                </div>
+                <img id="padlock3" src="/RoStats/Images/showpassword.png" onclick="padlock_change2()" onmouseover="document.getElementById('padlock2_description').style.display = 'flex'" onmouseout="document.getElementById('padlock2_description').style.display = 'none'" style="position: absolute; z-index: 99; width: 35px; height: auto; transform: translate(-55px, 19px); cursor: pointer; display: inline;">
+                <img id="padlock4" src="/RoStats/Images/hidepassword.png" onclick="padlock_change2()" onmouseover="document.getElementById('padlock2_description').style.display = 'flex'" onmouseout="document.getElementById('padlock2_description').style.display = 'none'" style="position: absolute; z-index: 99; width: 35px; height: auto; transform: translate(-55px, 19px); cursor: pointer; display: none;">
+                <h1 id="pass_no_match" style="font-size: 15px; margin-top: 10px; color: #c44c4c; margin-right: 20px; display: none;">Your Passwords Don't Match!</h1>
+            </div>
+
+            <!-- container for the roblox account linking box -->
+            <div class="container" style="width: 629px; height: 300px; margin-right: 16px; margin-left: 16px; margin-top: 15px;">
+                
+                <!-- roblox username -->
+                <h1 style="display: flex; justify-self: left !important; margin-left: 61px; font-size: 25px; padding-top: 31px;">Roblox Username</h1>
+                <input type="text" class="answer_box" name="robloxUS" placeholder="Put In Your Roblox Username..." value="" style="margin-top: 10px;" required>
+                
+                <!-- verification code -->
+                <h1 style="display: flex; justify-self: left !important; margin-left: 61px; font-size: 25px; padding-top: 35px;">Verification Code</h1>
+                <input type="text" class="answer_box" name="authcheck" id="authcheck" value="orange lemon coconut kiwi mango orange" style="margin-top: 10px; background-color: #B0B3B3;" readonly>
+                <!-- copy description -->
+                <div class="container" id="copy_code_description" style="display: none; transform: translate(178px, -105px); opacity: 90%; margin-left: 305px; width: 95px; height: 30px; position: absolute; z-index: 100; background-color:black; margin-top: 18px; transition: 0.3s ease 0s;">
+                    <h1 style="font-size: 18px; margin-right: 15px; margin-top: 2px;">Copy<h1>
+                    <div style="transform: translate(-5px, 5px); width: 0; height: 0;border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid black;"></div>
+                </div>
+                <img id="copy_code" src="/RoStats/Images/copy.png" onclick="document.getElementById('authcheck').focus(); document.getElementById('authcheck').select(); document.execCommand('copy');" onmouseover="document.getElementById('copy_code_description').style.display = 'block'" onmouseout="document.getElementById('copy_code_description').style.display = 'none'" style="position: absolute; z-index: 99; width: 35px; height: auto; transform: translate(-55px, 19px); cursor: pointer; display: inline;">
+                <h1 style="font-size: 15px; padding-top: 10px; color: #636363;">go to <a style="font-weight: 550; color: #2D94D5;" href="http://www.roblox.com/User.aspx?1D=57175921" target="_blank">your roblox profile</a> and add the code above to your 'About'.</h1>
+                
+            </div>
+
+            <!-- capcha -->
+            <div class="container" style="width: 629px; height: 116px; margin-right: 16px; margin-left: 16px; margin-top: 15px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center;">
+                <div class="h-captcha" data-sitekey="8d80b998-a817-48d4-aea2-33efacd26c8a"></div>
+            </div>
+
+            <!-- continue button -->
+            <div class="container" style="width: 629px; height: 130px; margin-right: 16px; margin-left: 16px; margin-top: 15px; margin-bottom: 15px;">
+                <input id="submitbutton" type="submit" class="input_submit" style="padding-right: 70px; padding-left: 70px; font-weight: 750; font-size: 25px; margin-top: 20px;" value="Create Account">
+            </div>
+
+        </div>
+
+    </form>
+
+
+
+    </body>
